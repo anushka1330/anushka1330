@@ -5,11 +5,11 @@ B.Tech CSE Student | Web Developer | AI Enthusiast
 </h3>
 
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B0000&height=250&section=header&text=Anushka%20Sharma&fontSize=50&fontColor=ffffff"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=561C24&height=250&section=header&text=Anushka%20Sharma&fontSize=50&fontColor=E8D8C4"/>
 </p>
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=FF0033&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;AI+Enthusiast;Learning+Korean+🇰🇷;I+Love+Journaling+📖"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=6D2932&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;AI+Enthusiast;Learning+and+evolving+daily"/>
 </p>
 
 <img align="right" alt="coding" width="350"
@@ -59,15 +59,15 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 # 📊 GitHub Stats
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=anushka1330&show_icons=true&theme=radical&title_color=ff0033&icon_color=ff0033&text_color=ffffff&bg_color=0d1117" />
+<img src="https://github-readme-stats.vercel.app/api?username=anushka1330&show_icons=true&theme=radical&title_color=6D2932&icon_color=561C24&text_color=E8D8C4&bg_color=00000000&border_color=6D2932" />
 </p>
 
 <p align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=anushka1330&theme=radical&ring=ff0033&fire=ff0033&currStreakLabel=ff0033" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=anushka1330&theme=dark&background=00000000&ring=6D2932&fire=561C24&currStreakLabel=E8D8C4&sideNums=E8D8C4&currStreakNum=E8D8C4&dates=C7B7A3&sideLabels=C7B7A3&border=6D2932" />
 </p>
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anushka1330&layout=compact&theme=radical&title_color=ff0033" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anushka1330&layout=compact&theme=transparent&title_color=6D2932&text_color=E8D8C4&border_color=6D2932" />
 </p>
 
 ---
@@ -82,7 +82,7 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 # 📈 Contribution Graph
 
-[![Anushka's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=anushka1330&bg_color=0d1117&color=ff0033&line=ff0033&point=ffffff&area=true&hide_border=true)](https://github.com/anushka1330)
+[![Anushka's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=anushka1330&bg_color=00000000&color=E8D8C4&line=6D2932&point=561C24&area=true&hide_border=true)](https://github.com/anushka1330)
 
 ---
 
