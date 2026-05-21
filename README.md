@@ -9,7 +9,7 @@ B.Tech CSE Student | Web Developer | AI Enthusiast
 </p>
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=6D2932&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;AI+Enthusiast;Learning+and+evolving+daily"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=6D2932&center=true&vCenter=true&width=700&lines=Web+Developer;AI+Enthusiast;Learning+and+evolving+daily"/>
 </p>
 
 <img align="right" alt="coding" width="350"
@@ -21,8 +21,8 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 - 🎓 B.Tech CSE Student at JECRC University
 - 💻 Currently learning Full Stack Development
-- 🌱 Exploring AI & Machine Learning
-- 🇰🇷 Currently learning Korean
+- 🌱 Exploring AI 
+- 🥢 Currently learning Korean
 - 📖 I love journaling 
 - 📫 Reach me at: annushkaa2604@gmail.com
 
@@ -72,13 +72,6 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 ---
 
-# 🐍 Contribution Snake
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/anushka1330/anushka1330/output/snake.svg" alt="snake animation"/>
-</p>
-
----
 
 # 📈 Contribution Graph
 
