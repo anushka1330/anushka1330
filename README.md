@@ -85,7 +85,4 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 <div align="center">
 
 ```text
-I can fix the world
-but they won't
-give me the
-source code
+ "Every bug fixed is a lesson learned."
