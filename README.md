@@ -82,8 +82,9 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 # 📈 Contribution Graph
 
-[![Anushka's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=anushka1330&bg_color=00000000&color=E8D8C4&line=6D2932&point=561C24&area=true&hide_border=true)](https://github.com/anushka1330)
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/anushka1330/anushka1330/main/github-metrics.svg">
+</p>
 ---
 
 # ✨ Quote
