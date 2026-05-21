@@ -88,6 +88,12 @@ src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 # ✨ Quote
 
+# ✨ Quote
+
 <p align="center">
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+<img width="500" src="https://i.pinimg.com/originals/8f/8f/4d/8f8f4d7b0fd7e8f5f4b1d5d9f1b2d3f.jpg">
+</p>
+
+<p align="center">
+<i>"I can fix the world, but they won't give me the source code."</i>
 </p>
