@@ -13,7 +13,8 @@ B.Tech CSE Student | Web Developer | AI Enthusiast
 </p>
 
 <img align="right" alt="coding" width="350"
-src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+src="<img width="540" height="1200" alt="WhatsApp Image 2026-06-06 at 2 15 35 PM" src="https://github.com/user-attachments/assets/ef800525-f027-4459-bd23-864bceafda77" />
+">
 
 ---
 
