@@ -12,9 +12,6 @@ B.Tech CSE Student | Web Developer | AI Enthusiast
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=6D2932&center=true&vCenter=true&width=700&lines=Web+Developer;AI+Enthusiast;Learning+and+evolving+daily"/>
 </p>
 
-<img align="right" alt="coding" width="350"
-src=<img width="540" height="1200" alt="WhatsApp Image 2026-06-06 at 2 15 35 PM" src="https://github.com/user-attachments/assets/ef800525-f027-4459-bd23-864bceafda77 />
-">
 
 ---
 
