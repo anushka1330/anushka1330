@@ -12,10 +12,12 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Generate graph
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate 3D contribution graph
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           USERNAME: ${{ github.repository_owner }}
@@ -26,55 +28,83 @@ jobs:
           python - <<'PY'
           import re
           from pathlib import Path
+          import xml.etree.ElementTree as ET
 
           path = Path("profile-3d-contrib/profile-night-green.svg")
+
           if not path.exists():
               raise SystemExit(f"SVG not found: {path}")
 
-          svg = path.read_text()
+          svg = path.read_text(encoding="utf-8")
 
           # Remove the full-size background rectangle.
-          svg = re.sub(
-              r'<rect\b(?=[^>]*\bx="0"[^>]*\by="0"[^>]*\bwidth="1280"[^>]*\bheight="850"[^>]*>.*?</rect>',
-              '',
-              svg,
-              count=1,
-              flags=re.IGNORECASE | re.DOTALL
-          )
+          root = ET.fromstring(svg)
+          ns = "{http://www.w3.org/2000/svg}"
 
-          # Convert RGB and hex green shades to cream.
-          palette = ["#BDA98A", "#D6C5A5", "#E8D8C4", "#F5EBDD"]
+          for element in list(root):
+              if element.tag == ns + "rect":
+                  width = element.get("width")
+                  height = element.get("height")
+                  x = element.get("x", "0")
+                  y = element.get("y", "0")
 
-          def recolor_rgb(match):
+                  if x == "0" and y == "0" and width == "1280" and height == "850":
+                      root.remove(element)
+                      break
+
+          svg = ET.tostring(root, encoding="unicode")
+
+          palette = [
+              "#BDA98A",
+              "#D6C5A5",
+              "#E8D8C4",
+              "#F5EBDD",
+          ]
+
+          def cream(r, g, b):
+              brightness = (r + g + b) / 3
+              index = min(3, int(brightness / 64))
+              return palette[index]
+
+          def replace_rgb(match):
               r, g, b = map(int, match.groups())
+
               if g > r * 1.08 and g > b * 1.05:
-                  brightness = (r + g + b) / 3
-                  return palette[min(3, int(brightness / 64))]
+                  return cream(r, g, b)
+
               return match.group(0)
 
           svg = re.sub(
-              r'rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)',
-              recolor_rgb,
+              r"rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)",
+              replace_rgb,
               svg,
-              flags=re.IGNORECASE
+              flags=re.IGNORECASE,
           )
 
-          def recolor_hex(match):
+          def replace_hex(match):
               color = match.group(0)
               value = color[1:]
-              r, g, b = int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16)
+
+              r = int(value[0:2], 16)
+              g = int(value[2:4], 16)
+              b = int(value[4:6], 16)
+
               if g > r * 1.08 and g > b * 1.05:
-                  brightness = (r + g + b) / 3
-                  return palette[min(3, int(brightness / 64))]
+                  return cream(r, g, b)
+
               return color
 
-          svg = re.sub(r"#[0-9a-fA-F]{6}", recolor_hex, svg)
+          svg = re.sub(
+              r"#[0-9a-fA-F]{6}",
+              replace_hex,
+              svg,
+          )
 
-          path.write_text(svg)
-          print("Background removal and cream recoloring completed.")
+          path.write_text(svg, encoding="utf-8")
+          print("SVG background and cream colors updated successfully.")
           PY
 
-      - name: Commit graph
+      - name: Commit updated graph
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Make contribution graph cream and transparent"
+          commit_message: "Update transparent cream contribution graph"
