@@ -1,71 +1,74 @@
 
-<!-- ============================================ -->
-<!-- ANUSHKA SHARMA | LUXURY EDITORIAL README     -->
-<!-- Burgundy: #561C24 | Cream: #E8D8C4           -->
-<!-- ============================================ -->
-
 <div align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=rect&color=E8D8C4&height=220&section=header&text=Anushka%20Sharma&fontSize=48&fontColor=561C24&desc=Developer%20in%20progress.%20Builder%20by%20curiosity.&descSize=15&animation=fadeIn"
-    width="100%"
-    alt="Anushka Sharma"
-  />
-</div>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=18" width="100%" alt=""/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=E8D8C4&height=210&text=Anushka%20Sharma&fontSize=48&fontColor=561C24&fontAlignY=38&desc=Developer%20in%20progress.%20Builder%20by%20curiosity.&descSize=15&descAlignY=60&animation=fadeIn" width="100%" alt="Anushka Sharma — developer profile banner"/>
 
 <br/>
 
-<img src="./anushka-cartoon.gif" width="170" alt="Anushka's cartoon avatar"/>
-
-<h3>Curiosity, translated into code.</h3>
-
-<p>
-  <em>Web Development · Artificial Intelligence · Continuous Learning</em>
-</p>
-
 <a href="https://linkedin.com/in/anushka-sharma30">
-  <img src="https://img.shields.io/badge/LinkedIn-561C24?style=flat-square&logo=linkedin&logoColor=E8D8C4" alt="LinkedIn"/>
+<img src="https://img.shields.io/badge/LINKEDIN-561C24?style=for-the-badge&logo=linkedin&logoColor=E8D8C4" alt="LinkedIn"/>
 </a>
 <a href="https://leetcode.com/anushka43">
-  <img src="https://img.shields.io/badge/LeetCode-561C24?style=flat-square&logo=leetcode&logoColor=E8D8C4" alt="LeetCode"/>
+<img src="https://img.shields.io/badge/LEETCODE-561C24?style=for-the-badge&logo=leetcode&logoColor=E8D8C4" alt="LeetCode"/>
 </a>
 <a href="mailto:annushkaa2604@gmail.com">
-  <img src="https://img.shields.io/badge/Email-561C24?style=flat-square&logo=gmail&logoColor=E8D8C4" alt="Email"/>
+<img src="https://img.shields.io/badge/EMAIL-561C24?style=for-the-badge&logo=gmail&logoColor=E8D8C4" alt="Email"/>
 </a>
 
+<br/><br/>
+
+<em>WEB DEVELOPMENT · ARTIFICIAL INTELLIGENCE · CONTINUOUS LEARNING</em>
+
 </div>
 
 ---
 
 <div align="center">
-
-### 01 / THE PERSON
-
-# A little about me.
-
-*Learning, experimenting, and turning curiosity into projects.*
-
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=01%20%2F%20ABOUT%20ME&fontSize=24&fontColor=E8D8C4" width="100%" alt="About Me"/>
 </div>
 
-- 🎓 B.Tech CSE student at JECRC University
-- 💻 Currently learning full-stack development
-- 🤖 Exploring artificial intelligence
-- 🌱 Learning something new with every project
+<table>
+<tr>
+<td width="60%" valign="middle">
+
+<h2>A little about me.</h2>
+
+I'm Anushka, a B.Tech CSE student at JECRC University, exploring full-stack development and artificial intelligence.
+
+I enjoy learning new things, documenting my journey, and turning ideas into projects.
+
+- 🎓 B.Tech CSE — JECRC University
+- 💻 Learning Full Stack Development
+- 🤖 Exploring Artificial Intelligence
 - 🇰🇷 Learning Korean
-- 📖 I love journaling
-- 📫 [Let's connect](mailto:annushkaa2604@gmail.com)
+- 📖 Journaling enthusiast
+- 📫 <a href="mailto:annushkaa2604@gmail.com">Let's connect</a>
+
+</td>
+<td width="40%" align="center" valign="middle">
+
+<img src="./anushka-cartoon.gif" width="250" alt="Anushka's cartoon avatar"/>
+
+<br/>
+
+<em>A little creativity behind every line of code.</em>
+
+</td>
+</tr>
+</table>
 
 ---
 
 <div align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=PROOF%20OF%20WORK&fontSize=24&fontColor=E8D8C4"
-    width="100%"
-    alt="Proof of Work"
-  />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=02%20%2F%20PROOF%20OF%20WORK&fontSize=23&fontColor=E8D8C4" width="100%" alt="Proof of Work"/>
+
+<h2>Things I'm building.</h2>
+
+<em>Ideas turned into experiments, projects, and lessons.</em>
+
 </div>
-
-
-<!-- PROJECT 01: Replace all placeholders with real details -->
 
 <table>
 <tr>
@@ -75,23 +78,21 @@
 
 **THE PROBLEM**
 
-What problem does your project solve, and who does it help?
+Describe the real-world problem your project addresses.
 
 **THE APPROACH**
 
-Describe its most useful features and what you implemented.
+Explain your solution and the features you implemented.
 
-**TECH STACK**
+**BUILT WITH**
 
 `Technology 1` · `Technology 2` · `Technology 3`
 
-[View Source Code](YOUR_REPOSITORY_URL) · [Live Demo](YOUR_LIVE_DEMO_URL)
+[Source Code](YOUR_REPOSITORY_URL) · [Live Demo](YOUR_LIVE_DEMO_URL)
 
 </td>
 </tr>
 </table>
-
-<!-- PROJECT 02: Duplicate this card for another real project -->
 
 <table>
 <tr>
@@ -101,17 +102,17 @@ Describe its most useful features and what you implemented.
 
 **THE PROBLEM**
 
-Explain the problem or idea behind this project.
+Describe the problem or idea behind your second project.
 
 **THE APPROACH**
 
-Describe one or two meaningful features or technical decisions.
+Highlight an interesting feature or technical challenge you explored.
 
-**TECH STACK**
+**BUILT WITH**
 
 `Technology 1` · `Technology 2`
 
-[View Source Code](YOUR_SECOND_REPOSITORY_URL) · [Live Demo](YOUR_SECOND_LIVE_DEMO_URL)
+[Source Code](YOUR_SECOND_REPOSITORY_URL) · [Live Demo](YOUR_SECOND_LIVE_DEMO_URL)
 
 </td>
 </tr>
@@ -120,112 +121,96 @@ Describe one or two meaningful features or technical decisions.
 ---
 
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=03%20%2F%20THE%20TOOLKIT&fontSize=24&fontColor=E8D8C4" width="100%" alt="The Toolkit"/>
 
-### 03 / THE TOOLKIT
+<h2>Tools of the trade.</h2>
 
-# Tools of the trade.
+<em>Technologies I'm learning and working with.</em>
 
-*Technologies I'm learning and working with.*
+<br/><br/>
 
-<br/>
-
-<img src="https://skillicons.dev/icons?i=c,cpp,java,python,html,css,javascript,mysql,mongodb,nodejs,react,git,github,vscode&theme=dark" alt="Technology stack"/>
+<img src="https://skillicons.dev/icons?i=c,cpp,java,python,html,css,javascript,mysql,mongodb,nodejs,react,git,github,vscode&theme=dark" alt="My technology stack"/>
 
 </div>
 
 ---
 
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=04%20%2F%20FIELD%20JOURNAL&fontSize=24&fontColor=E8D8C4" width="100%" alt="Field Journal"/>
 
-### 04 / NOTES FROM THE BUILD LOG
+<h2>Notes from the Build Log.</h2>
 
-# Small wins. Big lessons.
-
-*Every project leaves me with something new to learn.*
+<em>Small wins. Big lessons. One discovery at a time.</em>
 
 </div>
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 **FIELD NOTE 001**
 
 `LEARNING`
 
-**Subject:** Learning by building
+### Learning by building
 
 **Status:** In progress
 
-**Today's discovery**
-
-Write about a concept you recently understood or a problem you're working through.
+What concept are you learning? What did you discover while applying it?
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 **FIELD NOTE 002**
 
 `DEBUGGING`
 
-**Subject:** A bug worth remembering
+### A bug worth remembering
 
 **Status:** In progress
 
-**Today's discovery**
-
-Describe what caused the issue, how you investigated it, and what you learned.
+Describe a real bug you solved, what caused it, and what you learned.
 
 </td>
 </tr>
 </table>
 
-> Keep these notes personal and factual. Update them as you make real progress.
-
 ---
 
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=05%20%2F%20CONTRIBUTION%20GARDEN&fontSize=22&fontColor=E8D8C4" width="100%" alt="Contribution Garden"/>
 
-### 05 / THE CONTRIBUTION GARDEN
+<h2>Consistency over perfection.</h2>
 
-# Consistency over perfection.
+<em>Every contribution is a step forward.</em>
 
-*Every contribution is a step forward.*
-
-<br/>
+<br/><br/>
 
 <img src="./profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D GitHub contribution graph"/>
 
 <br/>
 
-<sub>A living visualization of my GitHub contributions.</sub>
+<sub>My coding journey, one contribution at a time.</sub>
 
 </div>
 
 ---
 
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=170&text=BUILT%20WITH%20CURIOSITY&fontSize=27&fontColor=E8D8C4&desc=Improved%20one%20commit%20at%20a%20time&descSize=15" width="100%" alt="Built with curiosity"/>
 
-### 06 / THE PHILOSOPHY
+<br/><br/>
 
-<br/>
+<em>Open to learning, building, and collaborating.</em>
 
-# BUILT WITH CURIOSITY.
-
-# IMPROVED ONE COMMIT AT A TIME.
-
-<br/>
-
-*Open to learning, building, and collaborating.*
-
-<br/>
+<br/><br/>
 
 <a href="mailto:annushkaa2604@gmail.com">
-  <img src="https://img.shields.io/badge/LET'S_CONNECT-561C24?style=for-the-badge&logo=gmail&logoColor=E8D8C4" alt="Contact Anushka"/>
+<img src="https://img.shields.io/badge/LET'S_CONNECT-561C24?style=for-the-badge&logo=gmail&logoColor=E8D8C4" alt="Let's connect"/>
 </a>
 
 <br/><br/>
 
-<sub>Learning. Building. Evolving.</sub>
+<sub>LEARNING · BUILDING · EVOLVING</sub>
 
 </div>
