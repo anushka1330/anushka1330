@@ -5,8 +5,12 @@
 <!-- ============================================ -->
 
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=E8D8C4&height=220&section=header&text=Anushka%20Sharma&fontSize=48&fontColor=561C24&fontAlignY=38&desc=Developer%20in%20progress.%20Builder%20by%20curiosity.&descSize=15&descAlignY=58&animation=fadeIn" width="100%" alt="Anushka Sharma banner"/>
+  <img
+    src="https://capsule-render.vercel.app/api?type=rect&color=E8D8C4&height=220&section=header&text=Anushka%20Sharma&fontSize=48&fontColor=561C24&desc=Developer%20in%20progress.%20Builder%20by%20curiosity.&descSize=15&animation=fadeIn"
+    width="100%"
+    alt="Anushka Sharma"
+  />
+</div>
 
 <br/>
 
@@ -53,14 +57,13 @@
 ---
 
 <div align="center">
-
-### 02 / PROOF OF WORK
-
-# Things I'm building.
-
-*Projects, experiments, and lessons learned along the way.*
-
+  <img
+    src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=65&text=PROOF%20OF%20WORK&fontSize=24&fontColor=E8D8C4"
+    width="100%"
+    alt="Proof of Work"
+  />
 </div>
+
 
 <!-- PROJECT 01: Replace all placeholders with real details -->
 
