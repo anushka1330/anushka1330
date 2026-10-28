@@ -1,7 +1,6 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=561C24&height=18" width="100%" alt=""/>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=E8D8C4&height=210&text=Anushka%20Sharma&fontSize=48&fontColor=561C24&fontAlignY=38&desc=Developer%20in%20progress.%20Builder%20by%20curiosity.&descSize=15&descAlignY=60&animation=fadeIn" width="100%" alt="Anushka Sharma — developer profile banner"/>
 
