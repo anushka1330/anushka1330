@@ -55,10 +55,10 @@ jobs:
           svg = ET.tostring(root, encoding="unicode")
 
           palette = [
-                      "#722F37",
-                      "#8B1E3F",
-                      "#A83250",
-                      "#C45A6A"
+                      "#4A001F",
+                      "#66001F",
+                      "#800020", 
+                      "#990033"
           ]
 
           def cream(r, g, b):
