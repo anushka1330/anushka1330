@@ -21,7 +21,7 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Recolor graph and remove background
+      - name: Make background transparent and blocks cream
         run: |
           python - <<'PY'
           import re
@@ -33,46 +33,48 @@ jobs:
 
           svg = path.read_text()
 
-          # Remove a full-canvas white or black background rectangle.
+          # Remove the full-size background rectangle.
           svg = re.sub(
-              r'<rect\b(?=[^>]*\bfill=["\'](?:#fff(?:fff)?|white|#000(?:000)?|black)["\'])[^>]*/>',
+              r'<rect\b(?=[^>]*\bx="0"[^>]*\by="0"[^>]*\bwidth="1280"[^>]*\bheight="850"[^>]*>.*?</rect>',
               '',
               svg,
-              flags=re.IGNORECASE
+              count=1,
+              flags=re.IGNORECASE | re.DOTALL
           )
 
+          # Convert RGB and hex green shades to cream.
           palette = ["#BDA98A", "#D6C5A5", "#E8D8C4", "#F5EBDD"]
 
-          def recolor(match):
-              color = match.group(0)
-              value = color[1:]
-              r = int(value[0:2], 16)
-              g = int(value[2:4], 16)
-              b = int(value[4:6], 16)
-
-              # Detect green-dominant colors, including darker greens.
+          def recolor_rgb(match):
+              r, g, b = map(int, match.groups())
               if g > r * 1.08 and g > b * 1.05:
                   brightness = (r + g + b) / 3
-                  index = min(3, int(brightness / 64))
-                  return palette[index]
+                  return palette[min(3, int(brightness / 64))]
+              return match.group(0)
 
-              return color
-
-          svg = re.sub(r"#[0-9a-fA-F]{6}", recolor, svg)
-
-          # Remove common inline background declarations.
           svg = re.sub(
-              r'background-color:\s*(?:#000(?:000)?|black|#fff(?:fff)?|white)\s*;?',
-              'background-color: transparent;',
+              r'rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)',
+              recolor_rgb,
               svg,
               flags=re.IGNORECASE
           )
 
+          def recolor_hex(match):
+              color = match.group(0)
+              value = color[1:]
+              r, g, b = int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16)
+              if g > r * 1.08 and g > b * 1.05:
+                  brightness = (r + g + b) / 3
+                  return palette[min(3, int(brightness / 64))]
+              return color
+
+          svg = re.sub(r"#[0-9a-fA-F]{6}", recolor_hex, svg)
+
           path.write_text(svg)
-          print("Graph recoloring completed.")
+          print("Background removal and cream recoloring completed.")
           PY
 
       - name: Commit graph
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Fix contribution graph colors"
+          commit_message: "Make contribution graph cream and transparent"
