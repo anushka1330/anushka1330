@@ -21,7 +21,7 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Recolor contribution blocks cream
+      - name: Recolor graph and remove background
         run: |
           python - <<'PY'
           import re
@@ -29,40 +29,50 @@ jobs:
 
           path = Path("profile-3d-contrib/profile-night-green.svg")
           if not path.exists():
-              raise SystemExit("Generated SVG was not found.")
+              raise SystemExit(f"SVG not found: {path}")
 
           svg = path.read_text()
 
-          colors = {
-              "#0e4429": "#BDA98A",
-              "#006d32": "#D6C5A5",
-              "#26a641": "#E8D8C4",
-              "#39d353": "#F5EBDD",
-              "#216e39": "#BDA98A",
-              "#30a14e": "#D6C5A5",
-              "#40c463": "#E8D8C4",
-              "#9be9a8": "#F5EBDD",
-              "#238636": "#BDA98A",
-              "#2ea043": "#D6C5A5",
-              "#3fb950": "#E8D8C4",
-              "#56d364": "#F5EBDD",
-              "#008000": "#E8D8C4",
-              "#00ff00": "#F5EBDD",
-          }
+          # Remove a full-canvas white or black background rectangle.
+          svg = re.sub(
+              r'<rect\b(?=[^>]*\bfill=["\'](?:#fff(?:fff)?|white|#000(?:000)?|black)["\'])[^>]*/>',
+              '',
+              svg,
+              flags=re.IGNORECASE
+          )
 
-          for old, new in colors.items():
-              svg = re.sub(re.escape(old), new, svg, flags=re.IGNORECASE)
+          palette = ["#BDA98A", "#D6C5A5", "#E8D8C4", "#F5EBDD"]
+
+          def recolor(match):
+              color = match.group(0)
+              value = color[1:]
+              r = int(value[0:2], 16)
+              g = int(value[2:4], 16)
+              b = int(value[4:6], 16)
+
+              # Detect green-dominant colors, including darker greens.
+              if g > r * 1.08 and g > b * 1.05:
+                  brightness = (r + g + b) / 3
+                  index = min(3, int(brightness / 64))
+                  return palette[index]
+
+              return color
+
+          svg = re.sub(r"#[0-9a-fA-F]{6}", recolor, svg)
+
+          # Remove common inline background declarations.
+          svg = re.sub(
+              r'background-color:\s*(?:#000(?:000)?|black|#fff(?:fff)?|white)\s*;?',
+              'background-color: transparent;',
+              svg,
+              flags=re.IGNORECASE
+          )
 
           path.write_text(svg)
-          print("Recolored known green shades to cream.")
-
-          remaining_green = re.findall(
-              r"#[0-9a-fA-F]{6}", svg
-          )
-          print("SVG updated. Check the generated file if green remains.")
+          print("Graph recoloring completed.")
           PY
 
       - name: Commit graph
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update cream contribution graph"
+          commit_message: "Fix contribution graph colors"
