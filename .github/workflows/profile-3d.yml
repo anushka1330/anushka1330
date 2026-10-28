@@ -16,13 +16,62 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate 3D contribution graph
+      - name: Generate graph
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit generated graph
+      - name: Recolor contribution graph
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          path = Path("profile-3d-contrib/profile-night-green.svg")
+
+          if not path.exists():
+              raise SystemExit("Generated SVG was not found.")
+
+          svg = path.read_text()
+
+          cream_palette = [
+              "#BDA98A",
+              "#D6C5A5",
+              "#E8D8C4",
+              "#F5EBDD",
+          ]
+
+          def recolor(match):
+              color = match.group(0)
+              value = color[1:]
+
+              if len(value) != 6:
+                  return color
+
+              r, g, b = (
+                  int(value[0:2], 16),
+                  int(value[2:4], 16),
+                  int(value[4:6], 16),
+              )
+
+              # Recolor green-dominant faces.
+              if g > r * 1.08 and g > b * 1.05:
+                  brightness = (r + g + b) / 3
+                  index = min(3, int(brightness / 64))
+                  return cream_palette[index]
+
+              # Recolor very dark backgrounds.
+              if max(r, g, b) < 35:
+                  return "#561C24"
+
+              return color
+
+          svg = re.sub(r"#[0-9a-fA-F]{6}", recolor, svg)
+          path.write_text(svg)
+          PY
+
+      - name: Commit graph
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update 3D contribution graph"
+          commit_message: "Update cream contribution graph"
