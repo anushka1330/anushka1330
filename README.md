@@ -10,7 +10,7 @@
 
 <br/>
 
-<img src="./assets/anushka-cartoon.gif" width="170" alt="Anushka's cartoon avatar"/>
+<img src="./anushka-cartoon.gif" width="170" alt="Anushka's cartoon avatar"/>
 
 <h3>Curiosity, translated into code.</h3>
 
